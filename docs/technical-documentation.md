@@ -1,4 +1,4 @@
-# Technical Documentation - Assignment 3
+# Technical Documentation - Assignment 4
 
 ## Project Overview
 
@@ -15,7 +15,7 @@ This release builds on Assignments 1 and 2 by adding robust external API integra
 ## File Structure
 
 ```
-assignment-3/
+assignment-4/
 ├── index.html              # Main HTML with enhanced interactive elements
 ├── css/
 │   └── styles.css          # Enhanced styling with animations
@@ -33,7 +33,7 @@ assignment-3/
 
 ---
 
-## Advanced Features in Assignment 3
+## Advanced Features in Assignment 4
 
 ### 1. Pinned GitHub API Integration with Timeout Protection
 

@@ -1,8 +1,8 @@
-# Interactive Portfolio Website - Assignment 3
+# Interactive Portfolio Website - Assignment 4
 
-Hello there! 👋 Welcome to my advanced portfolio website, built for SWE 363 Assignment 3 at KFUPM. This iteration builds upon Assignments 1 and 2 by adding complex API integrations, sophisticated application logic, advanced state management, and measurable performance optimizations.
+Hello there! 👋 Welcome to my advanced portfolio website, built for SWE 363 Assignment 4 at KFUPM. This iteration builds upon Assignments 1-3 by adding complex API integrations, sophisticated application logic, advanced state management, and measurable performance optimizations.
 
-## 🎯 What's New in Assignment 3?
+## 🎯 What's New in Assignment 4?
 
 This advanced version demonstrates sophisticated web application development:
 
@@ -61,7 +61,7 @@ This advanced version demonstrates sophisticated web application development:
 - ✅ **Form Validation** - Real-time field validation with visual feedback
 - ✅ **Mobile Navigation** - Hamburger menu with smooth transitions
 
-### Advanced Features (Assignment 3)
+### Advanced Features (Assignment 4)
 - 🆕 **GitHub API Integration** - Fetch latest repos with timeout and rate limit handling
 - 🆕 **Inspirational Quotes API** - Dynamic quotes with fallback library
 - 🆕 **API Error Handling** - Specific detection of rate limits, timeouts, network errors
@@ -156,7 +156,7 @@ assignment-2/
 
 🚀 **[View Live Site](https://almaan-portfolio.netlify.app/)**
 
-## 📚 What I Learned (Assignment 3)
+## 📚 What I Learned (Assignment 4)
 
 ### Advanced JavaScript Concepts
 - ✅ **API Integration Architecture** - Designing robust, fault-tolerant API calls

@@ -1,7 +1,7 @@
-# AI Usage Report - Assignment 3
+# AI Usage Report - Assignment 4
 
 ## Overview
-This document details how AI tools assisted me in developing advanced features for Assignment 3 of my portfolio website. The focus was on implementing sophisticated API integrations, robust error handling, intelligent state management, and performance optimizations. 
+This document details how AI tools assisted me in developing advanced features for Assignment 4 of my portfolio website. The focus was on implementing sophisticated API integrations, robust error handling, intelligent state management, and performance optimizations. 
 
 **Important**: I led the development effort on all features. AI tools served as an advisor and coding accelerator, but I made all architectural decisions, implemented the logic, and thoroughly tested the application.
 
