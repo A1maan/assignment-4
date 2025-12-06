@@ -742,6 +742,12 @@ p {
     gap: 0.5rem;
 }
 
+.project-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
 .project-category-badge {
     display: inline-block;
     padding: 0.35rem 0.9rem;

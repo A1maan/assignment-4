@@ -5,7 +5,7 @@ const projectsData = [
         title: "Rukn - AI Mental Health Platform",
         description: "Real-time Arabic-first mental health helpline monitoring dashboard for NCMH (National Center for Mental Health Promotion). Detects distress spikes, operational issues, and enables rapid response with human-in-the-loop approval using fine-tuned MARBERT models.",
         icon: "🧠",
-        category: "ai",
+        category: ["natural-language-processing"],
         tags: ["TypeScript", "FastAPI", "NLP", "MARBERT", "Next.js"],
         github: "https://github.com/A1maan/rukn",
         demo: "#"
@@ -15,7 +15,7 @@ const projectsData = [
         title: "Dyslexia Detection - IEEE Access Publication",
         description: "Feature-efficient and interpretable dyslexia detection via soft voting ensemble learning. Enhanced performance by more than 2% across all metrics compared to baseline models. Published in IEEE Access 2025. Engineered the novel approach, project code, and evaluation plots.",
         icon: "📊",
-        category: "research",
+        category: ["research", "machine-learning"],
         tags: ["PyTorch", "Python", "Machine Learning", "Ensemble Methods", "mRMR"],
         github: "https://github.com/A1maan",
         demo: "#"
@@ -25,7 +25,7 @@ const projectsData = [
         title: "Jarir AI Salesman - LangGraph Agent",
         description: "Intelligent chatbot assistant for Jarir Bookstore with tool-based reasoning. Engineered an agentic system using LangGraph to autonomously access and search product data. Developed during KAUST Academy AI Summer School with personalized recommendations.",
         icon: "🤖",
-        category: "ai-agents",
+        category: ["ai-agents"],
         tags: ["LangChain", "LangGraph", "Python", "NLP", "Agents"],
         github: "https://github.com/A1maan/jarir-nlp",
         demo: "#"
@@ -35,7 +35,7 @@ const projectsData = [
         title: "MSGU-Net - Medical Image Segmentation",
         description: "Lightweight deep learning framework for medical image segmentation, specifically designed for skin lesion detection. Published framework with comprehensive documentation and benchmarks on standard medical imaging datasets.",
         icon: "🏥",
-        category: "deep-learning",
+        category: ["deep-learning", "computer-vision"],
         tags: ["PyTorch", "Deep Learning", "Computer Vision", "Medical AI"],
         github: "https://github.com/A1maan/msgu-net",
         demo: "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2024.1480055/full"
@@ -45,7 +45,7 @@ const projectsData = [
         title: "Class Imbalance in Object Detection",
         description: "Research project addressing technical challenges of class imbalance and rare object detection in multi-class scenarios. Developing novel approaches to improve detection performance on underrepresented classes.",
         icon: "🎯",
-        category: "computer-vision",
+        category: ["computer-vision", "deep-learning"],
         tags: ["Object Detection", "Deep Learning", "PyTorch", "Computer Vision"],
         github: "https://github.com/A1maan/long-tail-imbalance-handling",
         demo: "#"
@@ -55,7 +55,7 @@ const projectsData = [
         title: "Interactive Portfolio Website",
         description: "Responsive, modern portfolio with dynamic project filtering, real-time search, enhanced form validation, and smooth animations. Features dark mode, GitHub API integration, and LocalStorage persistence. Built with vanilla JavaScript for optimal performance.",
         icon: "🌐",
-        category: "web",
+        category: ["web"],
         tags: ["HTML5", "CSS3", "JavaScript", "API Integration", "UX/UI"],
         github: "https://github.com/A1maan/assignment-2",
         demo: "#"
@@ -328,14 +328,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (emptyState) emptyState.style.display = 'none';
         
         projectsGrid.innerHTML = projects.map((project, index) => `
-            <div class="project-card" style="animation-delay: ${index * 0.1}s" data-category="${project.category}" data-project-id="${project.id}">
+            <div class="project-card" style="animation-delay: ${index * 0.1}s" data-category="${project.category.join(' ')}" data-project-id="${project.id}">
                 <div class="project-header">
                     <div class="project-image">
                         <div class="project-placeholder">${project.icon}</div>
                     </div>
                     <div class="project-header-content">
                         <h3 class="project-title">${project.title}</h3>
-                        <span class="project-category-badge">${project.category}</span>
+                        <div class="project-categories">
+                            ${project.category.map(cat => `<span class="project-category-badge">${cat}</span>`).join('')}
+                        </div>
                     </div>
                     <button class="project-expand-btn" aria-label="Toggle project details">
                         <span class="expand-icon">▼</span>
@@ -369,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (category === 'all') {
             filteredProjects = [...allProjects];
         } else {
-            filteredProjects = allProjects.filter(project => project.category === category);
+            filteredProjects = allProjects.filter(project => project.category.includes(category));
         }
         
         // Apply search if active
